@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+    position: relative;
+}
+
+.container {
+    width: 800px;
+    height: 180px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+}
+
+.container::before {
+    content: '';
+    height: 180px;
+    width: 180px;
+    background: #f8a47d;
+    z-index: -1;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    border-radius: 4px;
+
+
+}
+
+.container::after {
+    content: '';
+    height: 180px;
+    width: 180px;
+    background: #419aff;
+    z-index: -1;
+    position: absolute;
+    right: -40px;
+    bottom: -50px;
+    border-radius: 50%;
+
+}
+
+.clock {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(40px);
+}
+
+.clock span {
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after {
+   
+    position: absolute;
+    font-size: 16px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.clock #hrs::after{
+    content: 'Hours';
+}
+.clock #min::after{
+    content: 'Minutes';
+}
+.clock #sec::after{
+    content: 'Seconds';
+}
